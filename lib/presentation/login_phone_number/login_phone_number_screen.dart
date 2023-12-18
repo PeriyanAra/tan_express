@@ -6,6 +6,7 @@ import 'package:foundation_2/presentation/common/widgets/login_app_bar.dart';
 import 'package:foundation_2/presentation/common/widgets/tan_express_close_button.dart';
 import 'package:foundation_2/presentation/common/widgets/tan_express_primary_button.dart';
 import 'package:foundation_2/presentation/common/widgets/tan_express_text_field.dart';
+import 'package:foundation_2/presentation/nyheter/nyheter_screen.dart';
 import 'package:foundation_2/presentation/theme/theme.dart';
 
 class LoginPhoneNumberScreen extends StatefulWidget {
@@ -68,7 +69,11 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
                 const HeightBox(height: 12.0),
                 TanExpressPrimaryButton(
                   text: 'Fortsätt',
-                  onTap: () => {},
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<Widget>(
+                      builder: (context) => const NyheterScreen(),
+                    ),
+                  ),
                   enabled: _controller.text.isNotEmpty,
                 ),
               ],

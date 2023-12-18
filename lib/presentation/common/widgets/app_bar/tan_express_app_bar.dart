@@ -19,7 +19,7 @@ class TanExpressAppBar extends StatelessWidget {
       expandedHeight: 88.0,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
-        centerTitle: offset == 0,
+        centerTitle: true,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
