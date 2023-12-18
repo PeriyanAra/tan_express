@@ -70,7 +70,7 @@ class TanExpressTheme {
         pressed: TanExpressColorsPalette.skin60,
       ),
       foregroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.gray60.value,
+        TanExpressColorsPalette.gray50.value,
         disabled: TanExpressColorsPalette.black,
       ),
       foregroundTertiary: TanExpressColor(
