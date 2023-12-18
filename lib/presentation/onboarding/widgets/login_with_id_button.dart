@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foundation_2/common/constants/text_constants.dart';
+import 'package:foundation_2/presentation/login_phone_number/login_phone_number_screen.dart';
 import 'package:foundation_2/presentation/theme/tan_express_color_theme.dart';
 
 class LoginWithIdButton extends StatelessWidget {
@@ -11,7 +12,14 @@ class LoginWithIdButton extends StatelessWidget {
     final colorTheme = TanExpressColorTheme.of(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute<Widget>(
+            builder: (context) => const LoginPhoneNumberScreen(),
+          ),
+        );
+      },
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 24.0,

@@ -14,7 +14,7 @@ class OnboardingBottomSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       decoration: BoxDecoration(
-        color: colorTheme.foregroundTertiary,
+        color: colorTheme.foregroundPrimary,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(24.0),
           topRight: Radius.circular(24.0),

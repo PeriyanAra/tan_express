@@ -40,7 +40,7 @@ class TanExpressPrimaryButton extends StatelessWidget {
           text,
           style: textTheme.callout.copyWith(
             fontWeight: FontWeight.w800,
-            color: colorTheme.foregroundTertiary,
+            color: colorTheme.foregroundPrimary,
           ),
         ),
       ),

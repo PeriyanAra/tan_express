@@ -24,7 +24,7 @@ class TanExpressCloseButton extends StatelessWidget {
         ),
         child: Icon(
           Icons.close_rounded,
-          color: colorTheme.foregroundTertiary,
+          color: colorTheme.foregroundPrimary,
           size: 20,
         ),
       ),
