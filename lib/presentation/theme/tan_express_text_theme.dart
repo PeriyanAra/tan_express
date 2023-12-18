@@ -114,7 +114,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     covariant ThemeExtension<TanExpressTextTheme>? other,
     double t,
   ) {
-    throw UnimplementedError();
+    return this;
   }
 
   static TanExpressTextTheme of(BuildContext context) {

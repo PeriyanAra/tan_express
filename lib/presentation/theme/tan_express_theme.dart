@@ -74,8 +74,8 @@ class TanExpressTheme {
         disabled: TanExpressColorsPalette.black,
       ),
       foregroundTertiary: TanExpressColor(
-        TanExpressColorsPalette.white.value,
-        disabled: TanExpressColorsPalette.gray10,
+        TanExpressColorsPalette.gray20.value,
+        disabled: TanExpressColorsPalette.gray20,
       ),
       backgroundPrimary: TanExpressColor(
         TanExpressColorsPalette.gray10.value,

@@ -21,6 +21,7 @@ class TanExpressColorsPalette {
   static const Color skin60 = Color(0xFFD69A8C);
 
   static const Color gray10 = Color(0xFFF2F2F7);
+  static const Color gray20 = Color(0xFFE5E5EA);
   static const Color gray40 = Color(0xFFD1D1D6);
   static const Color gray50 = Color(0xFF8E8E93);
   static const Color gray60 = Color(0xFF595959);

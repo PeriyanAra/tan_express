@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foundation_2/presentation/common/widgets/custom_nav_bar/nav_item.dart';
+import 'package:foundation_2/presentation/theme/theme.dart';
 
 class TanExpressCustomBottomNavBar extends StatefulWidget {
   const TanExpressCustomBottomNavBar({super.key});
@@ -19,12 +20,14 @@ class _TanExpressCustomBottomNavBarState extends State<TanExpressCustomBottomNav
 
   @override
   Widget build(BuildContext context) {
+    final tanExpressColorTheme = TanExpressColorTheme.of(context);
+
     return Container(
       padding: const EdgeInsets.fromLTRB(9.0, 9.0, 9.0, 20.0),
-      decoration: const BoxDecoration(
-        color: Colors.white,
+      decoration: BoxDecoration(
+        color: tanExpressColorTheme.appBarPrimary,
         border: Border(
-          top: BorderSide(color: Colors.grey),
+          top: BorderSide(color: tanExpressColorTheme.foregroundTertiary),
         ),
       ),
       child: Row(

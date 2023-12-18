@@ -10,6 +10,7 @@ class NewsItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
           child: Column(
@@ -29,6 +30,9 @@ class NewsItem extends StatelessWidget {
                 height: 16.0,
               ),
               Image.asset('assets/images/news_item_photo.png'),
+              const SizedBox(
+                height: 16.0,
+              ),
               const Text(
                 'WELLNESS GRANT AT TANEXPRESS!',
                 style: TextStyle(fontWeight: FontWeight.bold),
