@@ -12,7 +12,7 @@ class TanExpressApp extends StatelessWidget {
     return MaterialApp(
       title: 'TanExpress',
       theme: TanExpressTheme.light(),
-      darkTheme: TanExpressTheme.dark(),
+      darkTheme: TanExpressTheme.light(),
       themeMode: context.watch<AppThemeMode>().themeMode,
       home: const NyheterScreen(),
     );
