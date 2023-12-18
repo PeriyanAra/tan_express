@@ -10,7 +10,7 @@ class TanExpressApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DiMind',
+      title: 'TanExpress',
       theme: TanExpressTheme.light(),
       darkTheme: TanExpressTheme.dark(),
       themeMode: context.watch<AppThemeMode>().themeMode,

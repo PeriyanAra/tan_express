@@ -61,7 +61,7 @@ class TanExpressColor extends Color implements MaterialStateProperty<Color> {
   }
 }
 
-extension DimindColorExtensions on TanExpressColor {
+extension TanExpressColorExtensions on TanExpressColor {
   TanExpressColor lerp(TanExpressColor? other, double t) {
     return TanExpressColor(
       Color.lerp(this, other, t)!.value,
