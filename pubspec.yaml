@@ -15,10 +15,11 @@ dependencies:
 
 dev_dependencies:
   dart_code_metrics: 5.7.2
-  dimind_analysis:
-    path: ./packages/dimind_analysis
   flutter_test:
     sdk: flutter
+  tan_express_analysis:
+    path: ./packages/tan_express_analysis
+
 
 flutter:
   uses-material-design: true

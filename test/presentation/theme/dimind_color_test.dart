@@ -7,7 +7,7 @@ import '../test_values.dart';
 void main() {
   group('Dimind Colors ---', () {
     test('copyWith replaces value', () {
-      final black = DimindColor(Colors.black.value);
+      final black = TanExpressColor(Colors.black.value);
       var colors = createColorTheme(whiteColor);
 
       expect(colors.primary, whiteColor);

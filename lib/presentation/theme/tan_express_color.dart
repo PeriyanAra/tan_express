@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class DimindColor extends Color implements MaterialStateProperty<Color> {
-  const DimindColor(
+class TanExpressColor extends Color implements MaterialStateProperty<Color> {
+  const TanExpressColor(
     super.value, {
     Color? light,
     Color? dark,
@@ -39,7 +39,7 @@ class DimindColor extends Color implements MaterialStateProperty<Color> {
 
   @override
   bool operator ==(Object other) =>
-      other is DimindColor &&
+      other is TanExpressColor &&
       value == other.value &&
       _light == other._light &&
       _dark == other._dark &&
@@ -61,9 +61,9 @@ class DimindColor extends Color implements MaterialStateProperty<Color> {
   }
 }
 
-extension DimindColorExtensions on DimindColor {
-  DimindColor lerp(DimindColor? other, double t) {
-    return DimindColor(
+extension DimindColorExtensions on TanExpressColor {
+  TanExpressColor lerp(TanExpressColor? other, double t) {
+    return TanExpressColor(
       Color.lerp(this, other, t)!.value,
       light: Color.lerp(_light, other?._light, t),
       dark: Color.lerp(_dark, other?._dark, t),
