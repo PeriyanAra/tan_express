@@ -10,6 +10,16 @@ class TanExpressTheme {
     final textTheme = TanExpressTextTheme(colorTheme: colorTheme);
 
     return ThemeData(
+      appBarTheme: AppBarTheme(
+        color: colorTheme.appBarPrimary,
+        elevation: 0,
+        titleTextStyle: textTheme.callout.copyWith(
+          fontWeight: FontWeight.w800,
+        ),
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: colorTheme.appBarPrimary,
+      ),
       applyElevationOverlayColor: false,
       splashFactory: NoSplash.splashFactory,
       highlightColor: Colors.transparent,
@@ -68,9 +78,6 @@ class TanExpressTheme {
         TanExpressColorsPalette.gray10.value,
       ),
       backgroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.white.value,
-      ),
-      backgroundTertiary: TanExpressColor(
         TanExpressColorsPalette.black.value,
       ),
       appBarPrimary: TanExpressColor(

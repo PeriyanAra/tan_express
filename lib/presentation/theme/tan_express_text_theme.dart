@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foundation_2/presentation/theme/tan_express_color_theme.dart';
 
-class TanExpressTextTheme extends ThemeExtension<TanExpressColorTheme> {
+class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
   const TanExpressTextTheme({
     required TanExpressColorTheme colorTheme,
   }) : _colorTheme = colorTheme;
@@ -105,13 +105,13 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressColorTheme> {
   }
 
   @override
-  ThemeExtension<TanExpressColorTheme> copyWith() {
+  ThemeExtension<TanExpressTextTheme> copyWith() {
     throw UnimplementedError();
   }
 
   @override
-  ThemeExtension<TanExpressColorTheme> lerp(
-    covariant ThemeExtension<TanExpressColorTheme>? other,
+  ThemeExtension<TanExpressTextTheme> lerp(
+    covariant ThemeExtension<TanExpressTextTheme>? other,
     double t,
   ) {
     throw UnimplementedError();

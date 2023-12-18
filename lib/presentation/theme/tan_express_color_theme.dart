@@ -18,7 +18,6 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
     required this.foregroundTertiary,
     required this.backgroundPrimary,
     required this.backgroundSecondary,
-    required this.backgroundTertiary,
   });
 
   final Brightness brightness;
@@ -36,7 +35,6 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
 
   final TanExpressColor backgroundPrimary;
   final TanExpressColor backgroundSecondary;
-  final TanExpressColor backgroundTertiary;
 
   final TanExpressColor appBarPrimary;
 
@@ -52,7 +50,7 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
         foregroundTertiary,
         backgroundPrimary,
         backgroundSecondary,
-        backgroundTertiary,
+        backgroundSecondary,
       );
 
   @override
@@ -70,7 +68,7 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
           foregroundTertiary == other.foregroundTertiary &&
           backgroundPrimary == other.backgroundPrimary &&
           backgroundSecondary == other.backgroundSecondary &&
-          backgroundTertiary == other.backgroundTertiary;
+          backgroundSecondary == other.backgroundSecondary;
 
   @override
   TanExpressColorTheme copyWith() {
@@ -84,7 +82,6 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
       foregroundTertiary: foregroundTertiary,
       backgroundPrimary: backgroundPrimary,
       backgroundSecondary: backgroundSecondary,
-      backgroundTertiary: backgroundTertiary,
       textPrimary: textPrimary,
       textSecondary: textSecondary,
       appBarPrimary: appBarPrimary,
@@ -110,10 +107,9 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
       foregroundTertiary: foregroundTertiary.lerp(other.foregroundTertiary, t),
       backgroundPrimary: backgroundPrimary.lerp(other.backgroundPrimary, t),
       backgroundSecondary: backgroundSecondary.lerp(other.backgroundSecondary, t),
-      backgroundTertiary: backgroundTertiary.lerp(other.backgroundTertiary, t),
       textPrimary: textPrimary.lerp(other.textPrimary, t),
       textSecondary: textSecondary.lerp(other.textSecondary, t),
-      appBarPrimary: backgroundTertiary.lerp(other.appBarPrimary, t),
+      appBarPrimary: backgroundSecondary.lerp(other.appBarPrimary, t),
     );
   }
 
