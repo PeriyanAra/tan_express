@@ -14,9 +14,12 @@ class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
     final colorTheme = TanExpressColorTheme.of(context);
 
     return AppBar(
-      leading: Icon(
-        Icons.arrow_back_ios_new_rounded,
-        color: colorTheme.backgroundSecondary,
+      leading: GestureDetector(
+        onTap: () => Navigator.of(context).pop(),
+        child: Icon(
+          Icons.arrow_back_ios_new_rounded,
+          color: colorTheme.backgroundSecondary,
+        ),
       ),
       centerTitle: true,
       title: Text(title),

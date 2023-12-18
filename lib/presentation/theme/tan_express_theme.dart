@@ -17,7 +17,7 @@ class TanExpressTheme {
           vertical: 16.0,
         ),
         filled: true,
-        fillColor: colorTheme.foregroundTertiary,
+        fillColor: colorTheme.foregroundPrimary,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: colorTheme.primary,
