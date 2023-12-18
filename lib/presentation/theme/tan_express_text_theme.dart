@@ -106,7 +106,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
 
   @override
   ThemeExtension<TanExpressTextTheme> copyWith() {
-    throw UnimplementedError();
+    return this;
   }
 
   @override
@@ -114,7 +114,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     covariant ThemeExtension<TanExpressTextTheme>? other,
     double t,
   ) {
-    throw UnimplementedError();
+    return this;
   }
 
   static TanExpressTextTheme of(BuildContext context) {
