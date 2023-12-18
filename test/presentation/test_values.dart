@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foundation_2/presentation/theme/theme.dart';
 
-final whiteColor = DimindColor(Colors.white.value);
+final whiteColor = TanExpressColor(Colors.white.value);
 
-DimindColorTheme createColorTheme(DimindColor color) {
-  return DimindColorTheme(
+TanExpressColorTheme createColorTheme(TanExpressColor color) {
+  return TanExpressColorTheme(
     brightness: Brightness.light,
     backgroundPrimary: color,
     backgroundSecondary: color,

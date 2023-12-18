@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foundation_2/presentation/theme/dimind_color.dart';
+import 'package:foundation_2/presentation/theme/tan_express_color.dart';
 
 const _halfT = 0.5;
 
 @immutable
-class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
-  const DimindColorTheme({
+class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
+  const TanExpressColorTheme({
     required this.brightness,
     required this.primary,
     required this.secondary,
@@ -20,17 +20,17 @@ class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
 
   final Brightness brightness;
 
-  final DimindColor primary;
-  final DimindColor secondary;
-  final DimindColor tertiary;
+  final TanExpressColor primary;
+  final TanExpressColor secondary;
+  final TanExpressColor tertiary;
 
-  final DimindColor foregroundPrimary;
-  final DimindColor foregroundSecondary;
-  final DimindColor foregroundTertiary;
+  final TanExpressColor foregroundPrimary;
+  final TanExpressColor foregroundSecondary;
+  final TanExpressColor foregroundTertiary;
 
-  final DimindColor backgroundPrimary;
-  final DimindColor backgroundSecondary;
-  final DimindColor backgroundTertiary;
+  final TanExpressColor backgroundPrimary;
+  final TanExpressColor backgroundSecondary;
+  final TanExpressColor backgroundTertiary;
 
   @override
   int get hashCode => Object.hash(
@@ -48,7 +48,7 @@ class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is DimindColorTheme &&
+      other is TanExpressColorTheme &&
           runtimeType == other.runtimeType &&
           primary == other.primary &&
           secondary == other.secondary &&
@@ -61,11 +61,11 @@ class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
           backgroundTertiary == other.backgroundTertiary;
 
   @override
-  DimindColorTheme copyWith({
-    DimindColor? primary,
-    DimindColor? secondary,
+  TanExpressColorTheme copyWith({
+    TanExpressColor? primary,
+    TanExpressColor? secondary,
   }) {
-    return DimindColorTheme(
+    return TanExpressColorTheme(
       brightness: brightness,
       primary: primary ?? this.primary,
       secondary: secondary ?? this.secondary,
@@ -80,15 +80,15 @@ class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
   }
 
   @override
-  ThemeExtension<DimindColorTheme> lerp(
-    covariant ThemeExtension<DimindColorTheme>? other,
+  ThemeExtension<TanExpressColorTheme> lerp(
+    covariant ThemeExtension<TanExpressColorTheme>? other,
     double t,
   ) {
-    if (other is! DimindColorTheme) {
+    if (other is! TanExpressColorTheme) {
       return this;
     }
 
-    return DimindColorTheme(
+    return TanExpressColorTheme(
       brightness: t < _halfT ? brightness : other.brightness,
       primary: primary.lerp(other.primary, t),
       secondary: secondary.lerp(other.secondary, t),
@@ -102,7 +102,7 @@ class DimindColorTheme extends ThemeExtension<DimindColorTheme> {
     );
   }
 
-  static DimindColorTheme of(BuildContext context) {
-    return Theme.of(context).extension<DimindColorTheme>()!;
+  static TanExpressColorTheme of(BuildContext context) {
+    return Theme.of(context).extension<TanExpressColorTheme>()!;
   }
 }

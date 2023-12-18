@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-class DimindColorsPalette {
+class TanExpressColorsPalette {
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
   static const Color light = Color(0xFFCCCCCC);
