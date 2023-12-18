@@ -7,6 +7,7 @@ class TanExpressTextField extends StatelessWidget {
     this.onChanged,
     this.controller,
     this.suffixIcon,
+    this.textInputType,
     super.key,
   });
 
@@ -14,6 +15,7 @@ class TanExpressTextField extends StatelessWidget {
   final void Function(String)? onChanged;
   final TextEditingController? controller;
   final Widget? suffixIcon;
+  final TextInputType? textInputType;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class TanExpressTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       onChanged: onChanged,
+      keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIconConstraints: suffixIcon != null
             ? const BoxConstraints(

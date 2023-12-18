@@ -56,6 +56,7 @@ class _LoginPhoneNumberScreenState extends State<LoginPhoneNumberScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TanExpressTextField(
+                  textInputType: TextInputType.phone,
                   controller: _controller,
                   hintText: 'Ange din telefonnummerd',
                   suffixIcon: _controller.text.isNotEmpty
