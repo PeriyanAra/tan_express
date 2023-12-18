@@ -1,0 +1,24 @@
+name: foundation_2
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: ^7.6.0
+  provider: ^6.0.5
+  shared_preferences: ^2.2.0
+
+dev_dependencies:
+  dart_code_metrics: 5.7.2
+  dimind_analysis:
+    path: ./packages/dimind_analysis
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
