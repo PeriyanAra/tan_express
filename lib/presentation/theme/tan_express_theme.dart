@@ -46,6 +46,9 @@ class TanExpressTheme {
   }) {
     return TanExpressColorTheme(
       brightness: brightness,
+      primary: TanExpressColor(
+        TanExpressColorsPalette.purple.value,
+      ),
       buttonPrimary: TanExpressColor(
         TanExpressColorsPalette.orange.value,
         disabled: TanExpressColorsPalette.gray40,

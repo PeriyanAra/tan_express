@@ -6,6 +6,7 @@ const _halfT = 0.5;
 @immutable
 class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
   const TanExpressColorTheme({
+    required this.primary,
     required this.appBarPrimary,
     required this.buttonPrimary,
     required this.buttonSecondary,
@@ -21,6 +22,8 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
   });
 
   final Brightness brightness;
+
+  final TanExpressColor primary;
 
   final TanExpressColor textPrimary;
   final TanExpressColor textSecondary;
@@ -85,6 +88,7 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
       textPrimary: textPrimary,
       textSecondary: textSecondary,
       appBarPrimary: appBarPrimary,
+      primary: primary,
     );
   }
 
@@ -110,6 +114,7 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
       textPrimary: textPrimary.lerp(other.textPrimary, t),
       textSecondary: textSecondary.lerp(other.textSecondary, t),
       appBarPrimary: backgroundSecondary.lerp(other.appBarPrimary, t),
+      primary: primary.lerp(other.primary, t),
     );
   }
 

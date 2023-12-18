@@ -12,6 +12,8 @@ class TanExpressColorsPalette {
 
   static const Color orange = Color(0xFFFF9500);
 
+  static const Color purple = Color(0xFFAF52DE);
+
   static const Color yellow60 = Color(0xFFFCC624);
 
   static const Color blue60 = Color(0xFF00539F);

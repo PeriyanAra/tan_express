@@ -8,6 +8,7 @@ class LoginPhoneNumberScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: LoginAppBar(title: 'Logga in med telefon'),
+      // body: ,
     );
   }
 }
