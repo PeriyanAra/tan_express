@@ -13,8 +13,8 @@ class TanExpressApp extends StatelessWidget {
       title: 'TanExpress',
       theme: TanExpressTheme.light(),
       darkTheme: TanExpressTheme.light(),
-      themeMode: context.watch<AppThemeMode>().themeMode,
       debugShowCheckedModeBanner: false,
+      themeMode: context.watch<AppThemeMode>().themeMode,
       home: const OnboardingScreen(),
     );
   }

@@ -9,21 +9,45 @@ class OnboardingBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      color: Colors.white,
+      padding: const EdgeInsets.all(16),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(24.0),
+          topRight: Radius.circular(24.0),
+        ),
+      ),
       child: Column(
         children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100),
+              color: const Color(0xFFF2F2F7),
+            ),
+            height: 4.0,
+            width: 57,
+          ),
+          const SizedBox(height: 24.0),
           const LoginWithIdButton(),
           const SizedBox(height: 8.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(width: 100.0, height: 1.0, color: const Color(0xFFF2F2F7)),
+              Container(
+                width: 100.0,
+                height: 1.0,
+                color: const Color(0xFFF2F2F7),
+              ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
                 child: Text(orText),
               ),
-              Container(width: 100.0, height: 1.0, color: const Color(0xFFF2F2F7)),
+              Container(
+                width: 100.0,
+                height: 1.0,
+                color: const Color(0xFFF2F2F7),
+              ),
             ],
           ),
           const SizedBox(height: 8.0),

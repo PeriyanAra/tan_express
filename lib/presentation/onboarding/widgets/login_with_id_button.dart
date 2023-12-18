@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:foundation_2/common/constants/text_constants.dart';
 
 class LoginWithIdButton extends StatelessWidget {
@@ -28,7 +29,7 @@ class LoginWithIdButton extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          Image.asset('assets/icons/group.png'),
+          SvgPicture.asset('assets/icons/group.svg'),
         ],
       ),
     );

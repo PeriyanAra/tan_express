@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foundation_2/common/constants/text_constants.dart';
+import 'package:foundation_2/presentation/onboarding/widgets/onboarding_bottom_sheet.dart';
 import 'package:foundation_2/presentation/onboarding/widgets/onboarding_description.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -36,9 +37,10 @@ class OnboardingScreen extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        color: const Color.fromARGB(255, 240, 240, 245),
+        color: const Color(0xFFF0F0F5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset('assets/images/app_logo.png'),
             const SizedBox(height: 80.0),
@@ -64,6 +66,8 @@ class OnboardingScreen extends StatelessWidget {
                 dotColor: Color(0xFFE5E5EA),
               ),
             ),
+            const Spacer(),
+            const OnboardingBottomSheet(),
             // const OnboardingBottomSheet(),
           ],
         ),
