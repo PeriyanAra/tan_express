@@ -63,7 +63,7 @@ class OnboardingBottomSheet extends StatelessWidget {
           ),
           const SizedBox(height: 10.0),
           const LoginWithPhoneButton(),
-          const SizedBox(height: 24.0),
+          const SizedBox(height: 60.0),
         ],
       ),
     );

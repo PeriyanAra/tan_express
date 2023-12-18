@@ -9,36 +9,39 @@ class LoginWithPhoneButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorTheme = TanExpressColorTheme.of(context);
 
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16.0,
-        vertical: 12.0,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
-        color: colorTheme.backgroundPrimary,
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            loginWithPhoneButtonText,
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 12.0,
-              color: colorTheme.textPrimary,
-              height: 14.4 / 12.0,
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16.0,
+          vertical: 12.0,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100),
+          color: colorTheme.backgroundPrimary,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              loginWithPhoneButtonText,
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 12.0,
+                color: colorTheme.textPrimary,
+                height: 14.4 / 12.0,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(width: 8.0),
-          Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: colorTheme.textSecondary,
-            size: 16.0,
-          ),
-        ],
+            const SizedBox(width: 8.0),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: colorTheme.textSecondary,
+              size: 16.0,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -41,11 +41,9 @@ class OnboardingScreen extends StatelessWidget {
       body: Stack(
         children: [
           Align(
-            alignment: Alignment.topCenter,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const SizedBox(height: 100.0),
                 Image.asset('assets/images/app_logo.png'),
                 const SizedBox(height: 80.0),
                 SizedBox(

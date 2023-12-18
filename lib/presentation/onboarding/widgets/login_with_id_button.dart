@@ -10,31 +10,34 @@ class LoginWithIdButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorTheme = TanExpressColorTheme.of(context);
 
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24.0,
-        vertical: 16.0,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
-        color: colorTheme.buttonSecondary,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const SizedBox(width: 24.0),
-          Text(
-            loginWithIdButtonText,
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 16.0,
-              color: colorTheme.backgroundPrimary,
-              height: 19.2 / 16.0,
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24.0,
+          vertical: 16.0,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100),
+          color: colorTheme.buttonSecondary,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(width: 24.0),
+            Text(
+              loginWithIdButtonText,
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 16.0,
+                color: colorTheme.backgroundPrimary,
+                height: 19.2 / 16.0,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
-          ),
-          SvgPicture.asset('assets/icons/group.svg'),
-        ],
+            SvgPicture.asset('assets/icons/group.svg'),
+          ],
+        ),
       ),
     );
   }
