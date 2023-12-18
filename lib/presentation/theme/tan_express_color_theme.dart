@@ -6,10 +6,13 @@ const _halfT = 0.5;
 @immutable
 class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
   const TanExpressColorTheme({
+    required this.appBarPrimary,
+    required this.buttonPrimary,
+    required this.buttonSecondary,
+    required this.buttonTertiary,
     required this.brightness,
-    required this.primary,
-    required this.secondary,
-    required this.tertiary,
+    required this.textPrimary,
+    required this.textSecondary,
     required this.foregroundPrimary,
     required this.foregroundSecondary,
     required this.foregroundTertiary,
@@ -20,9 +23,12 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
 
   final Brightness brightness;
 
-  final TanExpressColor primary;
-  final TanExpressColor secondary;
-  final TanExpressColor tertiary;
+  final TanExpressColor textPrimary;
+  final TanExpressColor textSecondary;
+
+  final TanExpressColor buttonPrimary;
+  final TanExpressColor buttonSecondary;
+  final TanExpressColor buttonTertiary;
 
   final TanExpressColor foregroundPrimary;
   final TanExpressColor foregroundSecondary;
@@ -32,11 +38,15 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
   final TanExpressColor backgroundSecondary;
   final TanExpressColor backgroundTertiary;
 
+  final TanExpressColor appBarPrimary;
+
   @override
   int get hashCode => Object.hash(
-        primary,
-        secondary,
-        tertiary,
+        textPrimary,
+        textSecondary,
+        buttonPrimary,
+        buttonSecondary,
+        buttonTertiary,
         foregroundPrimary,
         foregroundSecondary,
         foregroundTertiary,
@@ -50,9 +60,11 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
       identical(this, other) ||
       other is TanExpressColorTheme &&
           runtimeType == other.runtimeType &&
-          primary == other.primary &&
-          secondary == other.secondary &&
-          tertiary == other.tertiary &&
+          textPrimary == other.textPrimary &&
+          textSecondary == other.textSecondary &&
+          buttonPrimary == other.buttonPrimary &&
+          buttonSecondary == other.buttonSecondary &&
+          buttonTertiary == other.buttonTertiary &&
           foregroundPrimary == other.foregroundPrimary &&
           foregroundSecondary == other.foregroundSecondary &&
           foregroundTertiary == other.foregroundTertiary &&
@@ -61,21 +73,21 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
           backgroundTertiary == other.backgroundTertiary;
 
   @override
-  TanExpressColorTheme copyWith({
-    TanExpressColor? primary,
-    TanExpressColor? secondary,
-  }) {
+  TanExpressColorTheme copyWith() {
     return TanExpressColorTheme(
       brightness: brightness,
-      primary: primary ?? this.primary,
-      secondary: secondary ?? this.secondary,
-      tertiary: tertiary,
+      buttonPrimary: buttonPrimary,
+      buttonSecondary: buttonSecondary,
+      buttonTertiary: buttonTertiary,
       foregroundPrimary: foregroundPrimary,
       foregroundSecondary: foregroundSecondary,
       foregroundTertiary: foregroundTertiary,
       backgroundPrimary: backgroundPrimary,
       backgroundSecondary: backgroundSecondary,
       backgroundTertiary: backgroundTertiary,
+      textPrimary: textPrimary,
+      textSecondary: textSecondary,
+      appBarPrimary: appBarPrimary,
     );
   }
 
@@ -90,15 +102,18 @@ class TanExpressColorTheme extends ThemeExtension<TanExpressColorTheme> {
 
     return TanExpressColorTheme(
       brightness: t < _halfT ? brightness : other.brightness,
-      primary: primary.lerp(other.primary, t),
-      secondary: secondary.lerp(other.secondary, t),
-      tertiary: tertiary.lerp(other.tertiary, t),
+      buttonPrimary: buttonPrimary.lerp(other.buttonPrimary, t),
+      buttonSecondary: buttonSecondary.lerp(other.buttonSecondary, t),
+      buttonTertiary: buttonTertiary.lerp(other.buttonTertiary, t),
       foregroundPrimary: foregroundPrimary.lerp(other.foregroundPrimary, t),
       foregroundSecondary: foregroundSecondary.lerp(other.foregroundSecondary, t),
       foregroundTertiary: foregroundTertiary.lerp(other.foregroundTertiary, t),
       backgroundPrimary: backgroundPrimary.lerp(other.backgroundPrimary, t),
       backgroundSecondary: backgroundSecondary.lerp(other.backgroundSecondary, t),
       backgroundTertiary: backgroundTertiary.lerp(other.backgroundTertiary, t),
+      textPrimary: textPrimary.lerp(other.textPrimary, t),
+      textSecondary: textSecondary.lerp(other.textSecondary, t),
+      appBarPrimary: backgroundTertiary.lerp(other.appBarPrimary, t),
     );
   }
 

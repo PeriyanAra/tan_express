@@ -2,40 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:foundation_2/presentation/theme/tan_express_color.dart';
 import 'package:foundation_2/presentation/theme/tan_express_color_theme.dart';
 import 'package:foundation_2/presentation/theme/tan_express_colors_palette.dart';
+import 'package:foundation_2/presentation/theme/tan_express_text_theme.dart';
 
 class TanExpressTheme {
   static ThemeData light() {
     final colorTheme = _lightColorTheme();
+    final textTheme = TanExpressTextTheme(colorTheme: colorTheme);
 
     return ThemeData(
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: colorTheme.primary,
-      ),
       applyElevationOverlayColor: false,
       splashFactory: NoSplash.splashFactory,
       highlightColor: Colors.transparent,
       scaffoldBackgroundColor: colorTheme.backgroundPrimary,
       extensions: <ThemeExtension<dynamic>>[
         colorTheme,
-      ],
-    );
-  }
-
-  static ThemeData dark() {
-    final colorTheme = _darkColorTheme();
-
-    return ThemeData(
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: colorTheme.primary,
-      ),
-      applyElevationOverlayColor: false,
-      splashFactory: NoSplash.splashFactory,
-      highlightColor: Colors.transparent,
-      scaffoldBackgroundColor: colorTheme.backgroundPrimary,
-      extensions: <ThemeExtension<dynamic>>[
-        colorTheme,
+        textTheme,
       ],
     );
   }
@@ -43,6 +24,34 @@ class TanExpressTheme {
   static TanExpressColorTheme _lightColorTheme() {
     return _baseColorTheme(
       brightness: Brightness.light,
+    );
+  }
+
+  /////////////////////////////////////////////////////////////////
+  /************************* BASE ********************************/
+  /////////////////////////////////////////////////////////////////
+
+  static TanExpressColorTheme _baseColorTheme({
+    required Brightness brightness,
+  }) {
+    return TanExpressColorTheme(
+      brightness: brightness,
+      buttonPrimary: TanExpressColor(
+        TanExpressColorsPalette.orange.value,
+        disabled: TanExpressColorsPalette.gray40,
+      ),
+      buttonSecondary: TanExpressColor(
+        TanExpressColorsPalette.dark70.value,
+      ),
+      buttonTertiary: TanExpressColor(
+        TanExpressColorsPalette.gray10.value,
+      ),
+      textPrimary: TanExpressColor(
+        TanExpressColorsPalette.black.value,
+      ),
+      textSecondary: TanExpressColor(
+        TanExpressColorsPalette.gray50.value,
+      ),
       foregroundPrimary: TanExpressColor(
         TanExpressColorsPalette.black.value,
         pressed: TanExpressColorsPalette.skin60,
@@ -56,73 +65,17 @@ class TanExpressTheme {
         disabled: TanExpressColorsPalette.gray10,
       ),
       backgroundPrimary: TanExpressColor(
-        TanExpressColorsPalette.white.value,
-        pressed: TanExpressColorsPalette.gray10,
+        TanExpressColorsPalette.gray10.value,
       ),
       backgroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.gray10.value,
-        pressed: TanExpressColorsPalette.light,
+        TanExpressColorsPalette.white.value,
       ),
       backgroundTertiary: TanExpressColor(
         TanExpressColorsPalette.black.value,
       ),
-    );
-  }
-
-  static TanExpressColorTheme _darkColorTheme() {
-    return _baseColorTheme(
-      brightness: Brightness.dark,
-      foregroundPrimary: TanExpressColor(
+      appBarPrimary: TanExpressColor(
         TanExpressColorsPalette.white.value,
       ),
-      foregroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.gray50.value,
-      ),
-      foregroundTertiary: TanExpressColor(
-        TanExpressColorsPalette.dark60.value,
-      ),
-      backgroundPrimary: TanExpressColor(
-        TanExpressColorsPalette.dark70.value,
-      ),
-      backgroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.dark50.value,
-      ),
-      backgroundTertiary: TanExpressColor(
-        TanExpressColorsPalette.white.value,
-      ),
-    );
-  }
-
-  /////////////////////////////////////////////////////////////////
-  /************************* BASE ********************************/
-  /////////////////////////////////////////////////////////////////
-
-  static TanExpressColorTheme _baseColorTheme({
-    required Brightness brightness,
-    required TanExpressColor foregroundPrimary,
-    required TanExpressColor foregroundSecondary,
-    required TanExpressColor foregroundTertiary,
-    required TanExpressColor backgroundPrimary,
-    required TanExpressColor backgroundSecondary,
-    required TanExpressColor backgroundTertiary,
-  }) {
-    return TanExpressColorTheme(
-      brightness: brightness,
-      primary: TanExpressColor(
-        TanExpressColorsPalette.red60.value,
-      ),
-      secondary: TanExpressColor(
-        TanExpressColorsPalette.yellow60.value,
-      ),
-      tertiary: TanExpressColor(
-        TanExpressColorsPalette.blue60.value,
-      ),
-      foregroundPrimary: foregroundPrimary,
-      foregroundSecondary: foregroundSecondary,
-      foregroundTertiary: foregroundTertiary,
-      backgroundPrimary: backgroundPrimary,
-      backgroundSecondary: backgroundSecondary,
-      backgroundTertiary: backgroundTertiary,
     );
   }
 }
