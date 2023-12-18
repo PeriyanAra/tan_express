@@ -8,10 +8,20 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
 
   final TanExpressColorTheme _colorTheme;
 
+  TextStyle get extraLargeTitle {
+    return TextStyle(
+      fontSize: 40,
+      fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
+      color: _colorTheme.textPrimary,
+    );
+  }
+
   TextStyle get largeTitle {
     return TextStyle(
       fontSize: 34,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -20,6 +30,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 28,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -36,6 +47,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 22,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -44,6 +56,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -52,6 +65,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -60,6 +74,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 17,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -68,6 +83,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -76,6 +92,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 15,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -84,6 +101,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -92,6 +110,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 13,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }
@@ -100,6 +119,7 @@ class TanExpressTextTheme extends ThemeExtension<TanExpressTextTheme> {
     return TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.normal,
+      fontFamily: 'SF Pro',
       color: _colorTheme.textPrimary,
     );
   }

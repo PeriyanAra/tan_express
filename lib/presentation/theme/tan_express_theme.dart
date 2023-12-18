@@ -89,15 +89,15 @@ class TanExpressTheme {
         TanExpressColorsPalette.gray50.value,
       ),
       foregroundPrimary: TanExpressColor(
-        TanExpressColorsPalette.black.value,
-        pressed: TanExpressColorsPalette.skin60,
+        TanExpressColorsPalette.white.value,
       ),
       foregroundSecondary: TanExpressColor(
-        TanExpressColorsPalette.gray60.value,
+        TanExpressColorsPalette.gray50.value,
         disabled: TanExpressColorsPalette.black,
       ),
       foregroundTertiary: TanExpressColor(
-        TanExpressColorsPalette.white.value,
+        TanExpressColorsPalette.gray20.value,
+        disabled: TanExpressColorsPalette.gray20,
       ),
       backgroundPrimary: TanExpressColor(
         TanExpressColorsPalette.gray10.value,
