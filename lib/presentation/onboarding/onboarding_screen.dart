@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foundation_2/common/constants/text_constants.dart';
 import 'package:foundation_2/presentation/onboarding/widgets/onboarding_bottom_sheet.dart';
 import 'package:foundation_2/presentation/onboarding/widgets/onboarding_description.dart';
+import 'package:foundation_2/presentation/theme/tan_express_color_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -9,6 +10,7 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorTheme = TanExpressColorTheme.of(context);
     final pageController = PageController();
 
     final descriptionsList = [
@@ -36,41 +38,46 @@ class OnboardingScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      body: Container(
-        color: const Color(0xFFF0F0F5),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset('assets/images/app_logo.png'),
-            const SizedBox(height: 80.0),
-            Flexible(
-              child: SizedBox(
-                height: 200,
-                child: PageView.builder(
-                  controller: pageController,
-                  itemCount: descriptionsList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return descriptionsList[index];
-                  },
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment.topCenter,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const SizedBox(height: 100.0),
+                Image.asset('assets/images/app_logo.png'),
+                const SizedBox(height: 80.0),
+                SizedBox(
+                  height: 150,
+                  child: PageView.builder(
+                    controller: pageController,
+                    itemCount: descriptionsList.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return descriptionsList[index];
+                    },
+                  ),
                 ),
-              ),
+                SmoothPageIndicator(
+                  controller: pageController,
+                  count: descriptionsList.length,
+                  effect: ColorTransitionEffect(
+                    dotHeight: 8.0,
+                    dotWidth: 8.0,
+                    activeDotColor: colorTheme.primary,
+                    dotColor: const Color(0xFFE5E5EA),
+                  ),
+                ),
+              ],
             ),
-            SmoothPageIndicator(
-              controller: pageController,
-              count: descriptionsList.length,
-              effect: const ColorTransitionEffect(
-                dotHeight: 8.0,
-                dotWidth: 8.0,
-                activeDotColor: Color(0xFFAF52DE),
-                dotColor: Color(0xFFE5E5EA),
-              ),
-            ),
-            const Spacer(),
-            const OnboardingBottomSheet(),
-            // const OnboardingBottomSheet(),
-          ],
-        ),
+          ),
+          const Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: OnboardingBottomSheet(),
+          ),
+        ],
       ),
     );
   }

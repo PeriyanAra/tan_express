@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foundation_2/presentation/theme/tan_express_color_theme.dart';
 
 class OnboardingDescription extends StatelessWidget {
   const OnboardingDescription({
@@ -12,27 +13,33 @@ class OnboardingDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorTheme = TanExpressColorTheme.of(context);
+
     return Column(
       children: [
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 24.0,
-            color: Colors.black,
+            color: colorTheme.textPrimary,
             height: 33.6 / 24.0,
           ),
           textAlign: TextAlign.center,
         ),
-        Text(
-          description,
-          style: const TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 14.0,
-            color: Color(0xFF8E8E93),
-            height: 19.6 / 14.0,
+        Flexible(
+          child: Text(
+            description,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 14.0,
+              color: colorTheme.textSecondary,
+              height: 19.6 / 14.0,
+            ),
+            maxLines: 3,
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
           ),
-          textAlign: TextAlign.center,
         ),
       ],
     );
